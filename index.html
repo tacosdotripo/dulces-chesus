@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Para ti, mi amor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Quicksand", sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #ffd6e0);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b03563;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .letter {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+      user-select: none;
+    }
+
+    .letter:hover {
+      transform: scale(1.02);
+    }
+
+    .letter-content {
+      display: none;
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .reason {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .final-reason {
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-style: italic;
+      color: #b03563;
+    }
+
+    .button-surprise {
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+      user-select: none;
+    }
+
+    .button-surprise:hover {
+      background-color: #e055a3;
+    }
+
+    .hidden-message {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      margin-top: 20px;
+      background: #fff0f5;
+      padding: 15px;
+      border-radius: 10px;
+      color: #d6336c;
+      font-weight: bold;
+    }
+
+    .hidden-message.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .hidden-message.hide {
+      opacity: 0;
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto;
+      position: relative;
+      max-width: 320px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      border-radius: 15px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background 0.3s;
+      z-index: 10;
+      user-select: none;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(255, 105, 180, 0.8);
+    }
+
+    .carousel-btn.left {
+      left: 10px;
+    }
+
+    .carousel-btn.right {
+      right: 10px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo lo que me haces sentir 💖</h1>
+
+  <div class="container">
+    <div class="letter" onclick="toggleLetter()">
+      💌 Haz clic aquí para abrir tu cartita
+      <div class="letter-content" id="letterContent">
+         Mi amor, cada día que pasa me doy cuenta de lo profundamente enamorado que estoy de ti, eres mi persona favorita mi amor,
+A tu lado soy el niño más feliz del mundo, me haces sentir tan amado, tan especial,
+Contigo todo es más bonito, más mágico, más nuestro.
+El amor que tenemos es precioso, somos un equipo increíble que se cuida, se apoya y se ama con locura.
+Me siento el más afortunado de tener a la mejor novia del universo.
+No sabes cuánto te amo, cuánto me encantas y cuánto te adoro, mi niña linda.
+Gracias por hacer mi vida tan feliz, por existir, por ser tú 💖
+        <br />
+      </div>
+    </div>
+
+    <h2>Razones por las que me enamoré de ti 🌹</h2>
+    <div class="reason">Tu amor me abraza incluso cuando no estás cerca.</div>
+    <div class="reason">A tu lado descubrí lo que significa amar de verdad.</div>
+    <div class="reason">Cada vez que me miras, el mundo desaparece y sólo existimos tú y yo.</div>
+    <div class="reason">Tus palabras se quedan en mí mucho después de que las dices.</div>
+    <div class="reason">En tus brazos encontré el hogar que nunca supe que buscaba.</div>
+    <div class="reason">A veces te miro en silencio, sólo para agradecer que existes.</div>
+    <div class="reason">Contigo aprendí que el amor no es complicado, es real.</div>
+    <div class="reason">Tienes esa manera de calmar mis tormentas con solo una caricia.</div>
+    <div class="reason">Amarte es lo más natural que me ha pasado en la vida.</div>
+    <div class="reason">Eres el sueño que no sabía que tenía, hecho realidad.</div>
+    <div class="final-reason">Y aún así, me faltan palabras para describir todo lo que me haces sentir.</div>
+
+    <button class="button-surprise" onclick="showSurprise()">🎁 Sorpresa</button>
+    <div class="hidden-message" id="surprise">
+      Te amo con todo mi corazón mi vida<br />
+      Y cada día estoy seguro de que tú eres mi lugar favorito en el mundo.
+    </div>
+
+    <h2 style="margin-top: 40px;">Nuestros recuerdos</h2>
+    <div class="carousel" id="carousel">
+      <button class="carousel-btn left" onclick="prevImage()">←</button>
+      <img id="carouselImage" src="amor1.jpg" alt="Foto nuestra" />
+      <button class="carousel-btn right" onclick="nextImage()">→</button>
+    </div>
+  </div>
+
+  <footer>Hecho con mucho amor por tu noviecito 💖</footer>
+
+  <!-- Música de fondo -->
+  <audio id="bgm">
+    <source src="aa.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio :(
+  </audio>
+
+  <script>
+    // Reproducir música una vez al hacer clic en la página
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("bgm");
+      audio.loop = false;
+      audio.play().catch(() => {});
+    }, { once: true });
+
+    function toggleLetter() {
+      const content = document.getElementById("letterContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+
+      // Restablecer el estilo por si ya estaba oculto
+      surprise.classList.remove("hide");
+      surprise.classList.add("show");
+      surprise.style.display = "block";
+
+      setTimeout(() => {
+        surprise.classList.remove("show");
+        surprise.classList.add("hide");
+      }, 4500);
+
+      setTimeout(() => {
+        surprise.style.display = "none";
+      }, 5000);
+    }
+
+    // Carrusel
+    const images = ["amor1.jpg", "amor2.jpg", "amor3.jpeg", "amor4.jpeg", "amor5.jpeg"];
+    let currentIndex = 0;
+    const carouselImage = document.getElementById("carouselImage");
+
+    function showImage(index) {
+      carouselImage.style.opacity = 0;
+      setTimeout(() => {
+        carouselImage.src = images[index];
+        carouselImage.style.opacity = 1;
+      }, 300);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    // Swipe
+    const carousel = document.getElementById("carousel");
+    let startX = 0;
+
+    carousel.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextImage();
+      else if (endX - startX > 50) prevImage();
+    });
+
+    // Auto avanzar carrusel
+    setInterval(() => {
+      nextImage();
+    }, 4000);
+  </script>
+</body>
+</html>
