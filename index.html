@@ -19,83 +19,142 @@
 
     h1 {
       color: #d6336c;
-      margin-top: 40px;
+      margin-top: 50px;
       text-align: center;
+      font-weight: 700;
+      font-size: 2.8rem;
+      position: relative;
+      user-select: none;
+    }
+    h1::after {
+      content: " ❤️";
+      font-size: 1.8rem;
+      position: relative;
+      top: 4px;
+      color: #ff4f81;
     }
 
     h2 {
       text-align: center;
       color: #b03563;
+      font-weight: 700;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      user-select: none;
+      position: relative;
+    }
+    h2::before, h2::after {
+      content: "❤";
+      color: #ff6f91;
+      font-size: 1.4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      user-select: none;
+    }
+    h2::before {
+      left: -30px;
+    }
+    h2::after {
+      right: -30px;
     }
 
     .container {
       width: 90%;
-      max-width: 600px;
-      margin-top: 20px;
+      max-width: 650px;
+      margin-top: 30px;
       text-align: center;
     }
 
     .letter {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px 25px;
+      margin: 30px 0;
+      box-shadow: 0 8px 15px rgba(198, 44, 99, 0.15);
       cursor: pointer;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
     }
 
     .letter:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(198, 44, 99, 0.3);
     }
 
     .letter-content {
       display: none;
-      margin-top: 15px;
+      margin-top: 20px;
       font-style: italic;
       color: #555;
+      white-space: pre-line;
+      line-height: 1.6;
+      user-select: text;
     }
 
     .reason {
-      margin: 10px 0;
-      font-size: 1.1em;
+      margin: 15px 0;
+      font-size: 1.15em;
+      text-align: left;
+      user-select: text;
+      padding: 12px 20px 12px 45px;
+      background: rgba(255, 182, 193, 0.25);
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(255, 105, 180, 0.15);
+      position: relative;
+    }
+    .reason::before {
+      content: "💖";
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      margin-right: 8px;
     }
 
     .final-reason {
-      margin-top: 30px;
-      font-size: 1.2em;
+      margin-top: 40px;
+      font-size: 1.3em;
       font-style: italic;
       color: #b03563;
+      font-weight: 600;
+      user-select: text;
     }
 
     .button-surprise {
       background-color: #ff69b4;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 28px;
       border: none;
-      border-radius: 25px;
-      font-size: 1em;
+      border-radius: 30px;
+      font-size: 1.1em;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 30px;
       transition: background 0.3s;
       user-select: none;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
     }
 
     .button-surprise:hover {
       background-color: #e055a3;
+      box-shadow: 0 6px 15px rgba(224, 76, 156, 0.7);
     }
 
     .hidden-message {
       display: none;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
-      margin-top: 20px;
+      margin-top: 25px;
       background: #fff0f5;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 20px;
       color: #d6336c;
       font-weight: bold;
+      white-space: pre-line;
+      user-select: text;
+      box-shadow: 0 6px 15px rgba(255, 105, 180, 0.25);
     }
 
     .hidden-message.show {
@@ -111,12 +170,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 30px auto;
+      margin: 40px auto 50px;
       position: relative;
-      max-width: 320px;
+      max-width: 350px;
       overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(198, 44, 99, 0.15);
       user-select: none;
     }
 
@@ -126,86 +185,112 @@
       aspect-ratio: 3 / 4;
       object-fit: cover;
       transition: transform 0.4s ease, opacity 0.4s ease;
-      border-radius: 15px;
+      border-radius: 20px;
     }
 
     .carousel-btn {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.85);
       border: none;
-      font-size: 1.5em;
+      font-size: 1.7em;
       cursor: pointer;
-      padding: 8px 12px;
+      padding: 10px 15px;
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
       transition: background 0.3s;
       z-index: 10;
       user-select: none;
+      color: #d6336c;
+      box-shadow: 0 2px 6px rgba(198, 44, 99, 0.3);
     }
 
     .carousel-btn:hover {
-      background-color: rgba(255, 105, 180, 0.8);
+      background-color: rgba(255, 105, 180, 0.9);
+      color: white;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.8);
     }
 
     .carousel-btn.left {
-      left: 10px;
+      left: 12px;
     }
 
     .carousel-btn.right {
-      right: 10px;
+      right: 12px;
+    }
+
+    .download-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #ff4f81;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+      user-select: none;
+      box-shadow: 0 5px 15px rgba(255, 79, 129, 0.6);
+    }
+    .download-btn:hover {
+      background-color: #ff2d63;
+      box-shadow: 0 7px 20px rgba(255, 45, 99, 0.85);
     }
 
     footer {
       margin-top: auto;
-      padding: 30px;
-      font-size: 0.9em;
-      color: #888;
+      padding: 35px 20px;
+      font-size: 1em;
+      color: #b35a6a;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-  <h1>Todo lo que me haces sentir 💖</h1>
+  <h1>Felices 4 meses mi amor</h1>
 
   <div class="container">
     <div class="letter" onclick="toggleLetter()">
-      💌 Haz clic aquí para abrir tu cartita
+      💌 una cartita para mi novia preciosa
       <div class="letter-content" id="letterContent">
-         Mi amor, cada día que pasa me doy cuenta de lo profundamente enamorado que estoy de ti, eres mi persona favorita mi amor,
-A tu lado soy el niño más feliz del mundo, me haces sentir tan amado, tan especial,
-Contigo todo es más bonito, más mágico, más nuestro.
-El amor que tenemos es precioso, somos un equipo increíble que se cuida, se apoya y se ama con locura.
-Me siento el más afortunado de tener a la mejor novia del universo.
-No sabes cuánto te amo, cuánto me encantas y cuánto te adoro, mi niña linda.
-Gracias por hacer mi vida tan feliz, por existir, por ser tú 💖
-        <br />
+Mi amor, hoy llegamos a 4 meses juntos y no puedo evitar sonreír mientras escribo esto, han sido 4 meses que se han sentido como un instante, pero a la vez como si te hubiera amado toda mi vida, cuatro meses de abrazos que calman cualquier tristeza, de besos que saben a hogar, y de palabras que siempre me llenan el corazón, contigo he aprendido que el amor verdadero no es solo decir "te amo", sino demostrarlo todos los días, en las cosas pequeñas y en las grandes, eres mi razón para levantarme con ilusión, mi apoyo en los días difíciles y la mejor parte de todos mis planes, gracias por estos 4 meses de paciencia, ternura, risas, aventuras y cariño incondicional, si estos meses han sido tan hermosos, no puedo imaginar todo lo que nos espera, te amo más de lo que las palabras pueden decir, y este amor solo crecerá con el tiempo mi amor ❤️
       </div>
     </div>
 
-    <h2>Razones por las que me enamoré de ti 🌹</h2>
-    <div class="reason">Tu amor me abraza incluso cuando no estás cerca.</div>
-    <div class="reason">A tu lado descubrí lo que significa amar de verdad.</div>
-    <div class="reason">Cada vez que me miras, el mundo desaparece y sólo existimos tú y yo.</div>
-    <div class="reason">Tus palabras se quedan en mí mucho después de que las dices.</div>
-    <div class="reason">En tus brazos encontré el hogar que nunca supe que buscaba.</div>
-    <div class="reason">A veces te miro en silencio, sólo para agradecer que existes.</div>
-    <div class="reason">Contigo aprendí que el amor no es complicado, es real.</div>
-    <div class="reason">Tienes esa manera de calmar mis tormentas con solo una caricia.</div>
-    <div class="reason">Amarte es lo más natural que me ha pasado en la vida.</div>
-    <div class="reason">Eres el sueño que no sabía que tenía, hecho realidad.</div>
-    <div class="final-reason">Y aún así, me faltan palabras para describir todo lo que me haces sentir.</div>
+    <h2>Razones por las que estoy locamente enamorado de ti</h2>
+    <div class="reason">Tu amor me ha enseñado lo que es la verdadera felicidad</div>
+    <div class="reason">En estos 4 meses, me has demostrado que el destino existe </div>
+    <div class="reason">Porque me haces sentir entendido y valorado como nadie más</div>
+    <div class="reason">Porque tu sonrisa ilumina hasta mis días más oscuros</div>
+    <div class="reason">Cada día contigo es un regalo que valoro profundamente</div>
+    <div class="reason">Cada momento contigo se convierte en un recuerdo precioso</div>
+    <div class="reason">Me haces sentir que no necesito nada más que tu compañía</div>
+    <div class="reason">Tu manera de mirarme me hace sentir seguro y amado</div>
+    <div class="reason">Gracias a ti, cada día es mejor que el anterior</div>
+    <div class="reason">Eres la paz que calma mis tormentas</div>
+    <div class="final-reason">Y aún así, me faltan palabras para describir todo lo que me haces sentir</div>
 
     <button class="button-surprise" onclick="showSurprise()">🎁 Sorpresa</button>
     <div class="hidden-message" id="surprise">
-      Te amo con todo mi corazón mi vida<br />
-      Y cada día estoy seguro de que tú eres mi lugar favorito en el mundo.
+¡Feliz 4 meses, mi amor! ❤️
+No sabes lo afortunado que me siento de tenerte en mi vida, gracias por cada mensaje de buenos días, por cada abrazo que me devuelve la calma, por escucharme incluso cuando hablo de tonterías, y por amarme incluso en mis días más difíciles, estos 4 meses han sido solo el prólogo de nuestra historia, y sé que lo mejor todavía está por llegar, quiero seguir construyendo contigo recuerdos que nos hagan sonreír cuando seamos viejitos, quiero seguir tomándote de la mano y saber que ahí, juntos, es donde pertenecemos, por nosotros, por nuestro presente y por todos los meses y años que vienen
+Te amo con todo lo que soy, con toda mi alma y mi corazon mi niña linda💖
     </div>
 
-    <h2 style="margin-top: 40px;">Nuestros recuerdos</h2>
+    <h2>Nuestros recuerdos</h2>
     <div class="carousel" id="carousel">
       <button class="carousel-btn left" onclick="prevImage()">←</button>
       <img id="carouselImage" src="amor1.jpg" alt="Foto nuestra" />
       <button class="carousel-btn right" onclick="nextImage()">→</button>
+    </div>
+
+    <div class="download-container">
+      <a href="paramivida.pdf" download class="download-btn"> Algo que hice con mucho amor para ti mi niña preciosa ❤️</a>
     </div>
   </div>
 
@@ -232,8 +317,6 @@ Gracias por hacer mi vida tan feliz, por existir, por ser tú 💖
 
     function showSurprise() {
       const surprise = document.getElementById("surprise");
-
-      // Restablecer el estilo por si ya estaba oculto
       surprise.classList.remove("hide");
       surprise.classList.add("show");
       surprise.style.display = "block";
@@ -249,7 +332,7 @@ Gracias por hacer mi vida tan feliz, por existir, por ser tú 💖
     }
 
     // Carrusel
-    const images = ["amor1.jpg", "amor2.jpg", "amor3.jpeg", "amor4.jpeg", "amor5.jpeg"];
+    const images = ["amor1.jpeg", "amor2.jpeg", "amor3.jpeg", "amor4.jpeg", "amor5.jpeg", "amor6.jpeg", "amor7.jpeg"];
     let currentIndex = 0;
     const carouselImage = document.getElementById("carouselImage");
 
